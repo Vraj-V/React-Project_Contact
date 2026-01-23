@@ -2,9 +2,7 @@
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
-    margin-top: 40px;
     align-items: end;
-    margin-top: 40px;
 }
     .top_btn {
     display: flex;
@@ -52,3 +50,10 @@
         display: flex;
         justify-content: end;
     }
+
+        .result {
+    display: flex;
+    max-width: 1000px;
+    /* margin: 0 auto; */
+    align-items: start;
+        }

@@ -7,8 +7,11 @@ const App = () => {
   return (
     <div>
       <Navigation />
-      <Contact />
+    <main className='main_container'>
+            <Contact />
       <ContactForm />
+
+    </main>
 
     </div>
   )

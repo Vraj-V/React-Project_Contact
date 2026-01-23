@@ -1,20 +1,47 @@
-import React from 'react'
+import React,{useState} from 'react'
 import style from './ContactForm.module.css'
 import Button from '../Button/Button'
 import {Send} from 'lucide-react'
 import {Phone} from 'lucide-react'
 import {Mail} from 'lucide-react'
 const ContactForm = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [text, setText]= useState('')
+
+  const onViaCall = () =>{
+    console.log("calling");
+    
+  }
+
+  const onViaChat = () =>{
+    console.log("chatting");
+  }
+
+    const onViaEmail = () =>{
+    console.log("emailing");
+  }
+
+  const handleSubmit =(eve)=>{
+    eve.preventDefault();
+    console.log(eve)
+    setName(eve.target[0].value)
+    setEmail(eve.target[1].value)
+    setText(eve.target[2].value)
+  }
+
   return (
+    <>
     <section className={`${style.container}`}>
         <div className={`${style.contact_form}`}>
             <div className={`${style.top_btn}`}>
-            <Button text ='VIA SUPPORT CHAT' icon ={<Send />} />
-            <Button text ='VIA CALL' icon ={<Phone />} />
+            <Button text ='VIA SUPPORT CHAT' funcCalling={onViaChat} icon ={<Send />} />
+            <Button text ='VIA CALL' icon ={<Phone />} funcCalling={onViaCall} />
             </div>
-            <Button isOutline={true} text ='VIA MAIL FORM' icon ={<Mail />} />
+            <Button funcCalling={onViaEmail} isOutline={true} text ='VIA MAIL FORM' icon ={<Mail />} />
 
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
         <div className={style.form_controller}>
           <label htmlFor="name">Name:</label>
           <input type="text" />
@@ -35,6 +62,10 @@ const ContactForm = () => {
         </div>
 
         </form>
+            <div className={`${style.result}`}>
+
+      {name && email && text === ""? " ": name+ " " +email + " "  +text}
+    </div>
         </div>
 
 
@@ -42,8 +73,10 @@ const ContactForm = () => {
     <img src="./images/img.svg" alt="" />
 
         </div>
-
+    
     </section>
+
+    </>
   )
 }
 
