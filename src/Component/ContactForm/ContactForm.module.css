@@ -4,7 +4,8 @@
     margin: 0 auto;
     margin-top: 40px;
     align-items: end;
-    }
+    margin-top: 40px;
+}
     .top_btn {
     display: flex;
     gap: 32px;
@@ -14,4 +15,40 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+.form_controller{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    
+    }
+
+    .form_controller input{
+    padding: 5px 8px;
+    height: 40px;
+    }
+    
+    .form_controller label{
+        position: absolute;
+        top: -12px;
+        left: 10px;
+        padding: px 8px;
+        background-color: white;
+        font-size: 16px;
+        /* z-index: -1; */
+    }
+    .contact_form form{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .form_controller textarea{
+        padding: 25px 10px;
+        
+    }
+
+    .submit{
+        display: flex;
+        justify-content: end;
     }
