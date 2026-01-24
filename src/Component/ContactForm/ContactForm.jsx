@@ -12,18 +12,24 @@ const ContactForm = () => {
 
   const onViaCall = () =>{
     console.log("calling");
+    window.location.href = 'tel:1018544040' 
     
   }
 
   const onViaChat = () =>{
     console.log("chatting");
+  window.open(
+    "https://wa.me/1018544040?text=Hello%20I%20need%20support",
+    "_blank"
+  );
   }
 
     const onViaEmail = () =>{
     console.log("emailing");
+    window.location.href = `mailto:vvaland6928@gmail.com?subject=Request for help &body=Hello`
   }
 
-  const handleSubmit =(eve)=>{
+  const handleSubmit =(eve)=>{  
     eve.preventDefault();
     console.log(eve)
     setName(eve.target[0].value)
