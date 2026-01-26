@@ -4,6 +4,7 @@ import Contact from './Component/ContactHeader/Contact'
 import ContactForm from './Component/ContactForm/ContactForm'
 import {Routes,Route} from 'react-router-dom'
 import ContactPage from './Pages/ContactPage'
+import AboutPage from './Pages/AboutPage'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
               <ContactForm />
       </>}/>
         <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
       </Routes>
     </main>
 
