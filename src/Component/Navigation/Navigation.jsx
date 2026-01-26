@@ -1,14 +1,18 @@
 import React from 'react'
 import style from './Navigation.module.css'
+import { Link } from 'react-router-dom'
 const Navigation = () => {
   return (
     <nav className={`${style.navigation} container`}>
         <img src="./images/image.png" alt="logo website" />
         
     <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/contact'>Contact</Link>
+        </li>
     </ul>
     </nav>
   )
