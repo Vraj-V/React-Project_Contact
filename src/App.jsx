@@ -10,11 +10,13 @@ const App = () => {
     <div>
       <Navigation />
     <main className='main_container'>
-            <Contact />
-      <ContactForm />
+
 
       <Routes>
-        <Route path='/' element={<ContactForm/>}/>
+        <Route path='/' element={<> 
+                    <Contact />
+              <ContactForm />
+      </>}/>
         <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
     </main>
