@@ -1,0 +1,32 @@
+    .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.container h2{
+    text-decoration: underline;
+    font-weight: 200;
+}
+
+.image_container{
+    width: 42%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+    position: relative;
+    }
+
+
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-container img:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
